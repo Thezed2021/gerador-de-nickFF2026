@@ -1,0 +1,71 @@
+/* style.css - VERSÃO FINAL CORRIGIDA */
+:root {
+    --primary: #00ff88;
+    --dark-bg: #121212;
+    --card-bg: #1e1e1e;
+    --text-main: #ffffff;
+    --text-sec: #b0b0b0;
+    --border: #333;
+    --font-stack: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background-color: var(--dark-bg);
+    color: var(--text-main);
+    font-family: var(--font-stack);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a { color: var(--primary); text-decoration: none; }
+.container { max-width: 800px; margin: 0 auto; padding: 20px; }
+
+/* HEADER */
+header { text-align: center; padding: 40px 0 20px; border-bottom: 1px solid var(--border); }
+h1 { font-size: 2rem; color: var(--primary); margin-bottom: 10px; }
+nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 15px; }
+nav a { color: #fff; padding: 8px 16px; background: #2a2a2a; border-radius: 20px; font-size: 0.9rem; border: 1px solid var(--border); }
+nav a:hover { border-color: var(--primary); color: var(--primary); }
+
+/* CAIXAS E INPUTS */
+.tool-box { background: var(--card-bg); padding: 20px; border-radius: 12px; margin: 20px 0; border: 1px solid var(--border); }
+input[type="text"] { width: 100%; padding: 12px; background: #2a2a2a; border: 1px solid var(--border); color: white; border-radius: 8px; margin-bottom: 15px; font-size: 1rem; }
+button { background: var(--primary); color: #000; border: none; padding: 12px; border-radius: 8px; font-weight: bold; cursor: pointer; width: 100%; margin-top: 10px; }
+button:hover { opacity: 0.9; }
+
+/* FILTROS (HOME) */
+.nick-filters { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-bottom: 15px; }
+.filter-btn { background: #333; color: #fff; border: 1px solid #444; padding: 6px 12px; border-radius: 15px; cursor: pointer; width: auto; font-size: 0.8rem; }
+.filter-btn.active { background: var(--primary); color: #000; font-weight: bold; }
+
+/* LISTA DE RESULTADOS */
+.result-item { display: flex; justify-content: space-between; align-items: center; background: #232323; padding: 10px 15px; margin-bottom: 8px; border-radius: 6px; border-left: 3px solid var(--primary); }
+.nick-result { font-size: 1.1rem; color: #fff; word-break: break-all; }
+.nick-meta { display: block; font-size: 0.7rem; color: #777; }
+.copy-btn { width: auto; padding: 5px 15px; margin: 0; font-size: 0.8rem; background: transparent; color: var(--primary); border: 1px solid var(--primary); }
+.copy-btn:hover { background: var(--primary); color: #000; }
+
+/* GRADES DE SÍMBOLOS */
+.category-title { color: var(--primary); margin: 30px 0 10px; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; border-bottom: 1px solid #333; }
+.symbol-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(50px, 1fr)); gap: 8px; }
+.emoji-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(40px, 1fr)); gap: 5px; }
+.wide-grid { grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)) !important; }
+
+/* ITEM DO SÍMBOLO (COM DESCRIÇÃO) */
+.symbol-item, .emoji-item { background: #2a2a2a; border: 1px solid #333; border-radius: 6px; cursor: pointer; text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 55px; padding: 5px; transition: 0.2s; }
+.symbol-item:hover { background: var(--primary); color: #000; }
+.sym-main { font-size: 1.4rem; line-height: 1; }
+.sym-desc { font-size: 0.6rem; color: #888; margin-top: 4px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
+.symbol-item:hover .sym-desc { color: #000; }
+
+/* NAV PILLS (PÁGINA SÍMBOLOS) */
+.nav-pills { display: flex; gap: 10px; justify-content: center; margin-bottom: 20px; }
+.nav-btn { background: #333; color: #fff; padding: 8px 16px; border-radius: 20px; font-size: 0.9rem; }
+
+/* TOAST E FOOTER */
+#toast { visibility: hidden; min-width: 250px; background-color: var(--primary); color: #000; text-align: center; border-radius: 50px; padding: 12px; position: fixed; z-index: 100; bottom: 30px; left: 50%; transform: translateX(-50%); font-weight: bold; }
+#toast.show { visibility: visible; }
+footer { text-align: center; padding: 50px 20px; margin-top: 50px; border-top: 1px solid #333; color: #666; font-size: 0.9rem; }
+.ad-slot { background: #151515; border: 1px dashed #444; height: 100px; display: flex; align-items: center; justify-content: center; margin: 20px 0; color: #555; font-size: 0.8rem; }
