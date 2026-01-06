@@ -21,20 +21,47 @@
     </header>
 
     <main class="container">
+        <div class="ad-slot">
+            <span>Publicidade</span>
+        </div>
+
         <div class="nav-pills">
-            <a href="#area-simbolos" class="nav-btn">Símbolos</a>
-            <a href="#area-emojis" class="nav-btn">Emojis</a>
+            <a href="#area-simbolos" class="nav-btn">Símbolos Raros</a>
+            <a href="#area-emojis" class="nav-btn">Todos os Emojis</a>
         </div>
 
         <section id="area-simbolos" class="tool-box">
             <div id="rare-symbols-container"></div>
+            
+            <br>
+            <div class="ad-slot" style="margin: 30px 0;">
+                <span>Publicidade</span>
+            </div>
+
+            <h3>Espaços Invisíveis</h3>
+            <div class="result-item">
+                <span>Espaço Pequeno ( )</span>
+                <button class="copy-btn" onclick="copyText('\u3164')">Copiar</button>
+            </div>
+            <div class="result-item">
+                <span>Espaço Médio (⁣⁣)</span>
+                <button class="copy-btn" onclick="copyText('⁣⁣')">Copiar</button>
+            </div>
+            <div class="result-item">
+                <span>Espaço Grande (ㅤ)</span>
+                <button class="copy-btn" onclick="copyText('ㅤ')">Copiar</button>
+            </div>
         </section>
 
+        <div class="ad-slot">
+            <span>Publicidade</span>
+        </div>
+
         <section id="area-emojis" class="tool-box">
+            <h2 style="text-align:center;">Banco de Emojis</h2>
             <div id="emojis-container"></div>
         </section>
     </main>
-
     <footer>
         <div class="container">
             <p>&copy; 2026 Gerador de Nick.</p>
